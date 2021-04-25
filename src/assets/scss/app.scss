@@ -1,0 +1,43 @@
+@import "~bootstrap/scss/bootstrap";
+
+.rowLink{
+    display:block;
+    color:#7d7d7d;
+
+    &:hover{
+      color: #93a014;
+      text-decoration: none;
+    }
+    tr{
+        display: table;
+        width: 100%;
+    }
+  &:nth-child(odd){
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+}
+.header{
+  background: #f8f9fa;
+}
+
+.table-custom{
+  width: 100%;
+  padding: 19px;
+  background: #f7f7f7;
+    .table-row{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+
+        .table-col{
+            text-align: center;
+            flex: 1;
+            padding: 8px;
+        }
+    }
+}
+
