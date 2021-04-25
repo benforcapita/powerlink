@@ -25,6 +25,13 @@ function TeamDetails(props) {
   var [founded, setFounded] = useState(teamData.founded);
   var [address, setTeamAddress] = useState(teamData.address);
 
+  var players = teamData.players.map((player, index) => (
+    <div key={index} className="players-row">
+      <div>
+        {Object.keys(player)[0]} {player[Object.keys(player)[0]]}{" "}
+      </div>
+    </div>
+  ));
   return (
     <div className="container shadow-sm p-5 rounded">
       <h3 className="text-center mb-3 border-bottom pb-4">
@@ -68,6 +75,7 @@ function TeamDetails(props) {
                   onChange={(e) => setTeamAddress(e.target.value)}
                 />
               </div>
+              {players}
             </div>
           </div>
           <button
